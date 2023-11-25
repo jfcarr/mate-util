@@ -4,7 +4,7 @@ MATE Utilities (mate-util) is a set of operational scripts for the MATE desktop 
 
 ## Scripts
 
-### check-reboot
+### check-reboot.sh
 
 This Bash script checks for the existence of a `/var/run/reboot-required` file (indicating the need for a reboot) and displays a message accordingly.
 
