@@ -1,31 +1,57 @@
-# MATE Utility
+# MATE Utilities
 
-MATE Utility (mate-util) is a CLI application allowing quick and easy manipulation of internal application settings for the MATE desktop environment.  It will be extended in the future, but for now it only supports enabling and disabling of a touchpad.
+MATE Utilities (mate-util) is a set of operational scripts for the MATE desktop environment.  These have been tested in Ubuntu MATE.
 
-Tested in Ubuntu MATE.
+## Scripts
 
-## Usage
+### check-reboot
+
+This Bash script checks for the existence of a `/var/run/reboot-required` file (indicating the need for a reboot) and displays a message accordingly.
+
+Usage:
 
 ```bash
-mate-util <command> <subcommand>
+check-reboot.py
 ```
 
-### Examples
+Sample output:
+
+```
+A reboot is NOT needed.
+```
+
+### touchpad.py
+
+This Python script lets you enable, disable, and check the current status of a touchpad.
 
 Enable the touchpad:
 
 ```bash
-mate-util touchpad enable
+touchpad.py enable
 ```
 
 Disable the touchpad:
 
 ```bash
-mate-util touchpad disable
+touchpad.py disable
 ```
 
-Show current touchpad enabled state:
+Check the current state of the touchpad:
 
 ```bash
-mate-util touchpad check
+touchpad.py check
+```
+
+```
+true
+```
+
+### upgrade-packages-and-snaps.sh
+
+This Bash script upgrades installed packages, upgrades installed snaps, and displays a message if the system needs to be rebooted afterwards.
+
+Usage:
+
+```bash
+upgrade-packages-and-snaps.sh
 ```
